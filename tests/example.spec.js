@@ -86,7 +86,7 @@ test("Criando uma reserva", async ({ request }) => {
   expect(responseBody.booking).toHaveProperty("depositpaid", true);
 });
 
-test("Gerando token", async ({ request }) => {
+test("Gerando token @regressivo", async ({ request }) => {
   const responseToken = await request.post("/auth", {
     data: {
       username: "admin",
